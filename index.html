@@ -32,9 +32,11 @@ from js import performance
 from js import Object
 import asyncio
 
-mouse = THREE.Vector2.new();
-renderer = THREE.WebGLRenderer.new({"antialias":True}) renderer.setSize(1000, 1000) renderer.shadowMap.enabled = False renderer.shadowMap.type = THREE.PCFSoftShadowMap renderer.shadowMap.needsUpdate = True
-document.body.appendChild( renderer.domElement )
+renderer = THREE.WebGLRenderer.new({"antialias":True})
+renderer.setSize(1000, 1000)
+renderer.shadowMap.enabled = False
+renderer.shadowMap.type = THREE.PCFSoftShadowMap
+renderer.shadowMap.needsUpdate = True
 
 import js, pyodide
 def onMouseMove(event):
